@@ -1,0 +1,9 @@
+.Card {
+	margin: 1rem;
+	padding: 1rem;
+}
+
+.Card p{
+	font-size: var(--font-small);
+	margin: 0.3rem;
+}
