@@ -41,14 +41,11 @@ function RMTable(): JSX.Element {
                 </div>
             </div>
             {
-                selectStatus !== 'All' || selectSpecies !== 'All' ?
                 <Table table={table.filter((t) => {
                     const statusMatch = selectStatus === 'All' || t.status.toLowerCase() === selectStatus.toLowerCase();
                     const speciesMatch = selectSpecies === 'All' || t.species.toLowerCase() === selectSpecies.toLowerCase();
                     return statusMatch && speciesMatch;
                 })}/>
-                :
-                <Table table={table}/>
             }
         </div>
     );

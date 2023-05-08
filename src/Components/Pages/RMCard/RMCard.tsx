@@ -40,15 +40,12 @@ function RMCard(): JSX.Element {
             </div>
             <div className="centerRow">
                 {
-                    selectStatus !== 'All' || selectSpecies !== 'All' ?
                     cards.filter((c) => {
                         // return c.status.includes(selectStatus) && c.species.includes(selectSpecies)
                         const statusMatch = selectStatus === 'All' || c.status.toLowerCase() === selectStatus.toLowerCase();
                         const speciesMatch = selectSpecies === 'All' || c.species.toLowerCase() === selectSpecies.toLowerCase();
                         return statusMatch && speciesMatch;
                     }).map((c) => <Card key={c.id} rickMorty={c} />)
-                    :
-                    cards.map(c => <Card key={c.id} rickMorty={c} />)
                 }
             </div>
 			
